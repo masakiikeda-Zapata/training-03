@@ -1,15 +1,15 @@
 # Workflow API version
 apiVersion: io.orquestra.workflow/1.0.0
 # Prefix for workflow ID
-name: bell-state
+name: H-gate
 
 # List components needed by workflow.
 imports:
-- name: bell-state
+- name: H-gate
   type: git
   parameters:
-    repository: "git@github.com:zapatacomputing/workshop-bell-state.git"
-    branch: "main"
+    repository: "git@github.com:masakiikeda-Zapata/training-03.git"
+    branch: "master"
 
 # List the steps in the workflow
 steps:
@@ -17,9 +17,9 @@ steps:
   config:
     runtime:
       language: python3
-      imports: [bell-state] 
+      imports: [H-gate] 
       parameters:
-        file: bell-state/steps/solution.py
+        file: H-gate/steps/h_gate.py
         function: main
   outputs:
   - name: results
