@@ -31,20 +31,20 @@ steps:
   config:
     runtime:
       language: python3
-      imports: [z-quantum-core, qe-qulacs, bell-state]
+      imports: [z-quantum-core, qe-qulacs, qe-forest, bell-state]
       # imports: [z-quantum-core, qe-forest, bell-state] 
       parameters:
         file: bell-state/steps/orquestra_solution.py
         function: main
   inputs:
   # Try change the backend to Forest
-  - backend_specs: 
-      module_name: qequlacs.simulator
-      function_name: QulacsSimulator
-  # - backend_specs:
-  #     module_name: qeforest.simulator
-  #     function_name: ForestSimulator
-  #     device_name: wavefunction-simulator
+  # - backend_specs: 
+  #    module_name: qequlacs.simulator
+  #    function_name: QulacsSimulator
+  - backend_specs:
+      module_name: qeforest.simulator
+      function_name: ForestSimulator
+      device_name: wavefunction-simulator
     type: specs
   outputs:
   - name: output-distribution
