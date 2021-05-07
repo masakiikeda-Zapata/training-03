@@ -8,7 +8,7 @@ imports:
 - name: x-gate
   type: git
   parameters:
-    repository: "git@github.com:masakiikeda-Zapata/training-03.git"
+    repository: "git@github.com:<your_own_repo>/training-03.git"
     branch: "main"
 
 # List the steps in the workflow
