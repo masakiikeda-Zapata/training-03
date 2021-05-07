@@ -1,11 +1,11 @@
 # Workflow API version
 apiVersion: io.orquestra.workflow/1.0.0
 # Prefix for workflow ID
-name: x-gate
+name: h-gate
 
 # List components needed by workflow.
 imports:
-- name: x-gate
+- name: h-gate
   type: git
   parameters:
     repository: "git@github.com:masakiikeda-Zapata/training-03.git"
@@ -17,9 +17,9 @@ steps:
   config:
     runtime:
       language: python3
-      imports: [x-gate] 
+      imports: [h-gate] 
       parameters:
-        file: x-gate/steps/x_gate.py
+        file: h-gate/steps/h_gate.py
         function: main
   outputs:
   - name: results

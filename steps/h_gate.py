@@ -4,12 +4,12 @@ import json
 
 def main():
     # Define registers and circuit
-    # MISSING
-    # MISSING
+    q = QuantumRegister(1)
+    c = ClassicalRegister(1)
     circuit = QuantumCircuit(q, c)
 
     # Quantum circuit starts here
-    # MISSING
+    circuit.h(q[0])
     circuit.measure(q, c)
     # End quantum circuit
 
