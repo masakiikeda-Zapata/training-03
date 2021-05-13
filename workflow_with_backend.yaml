@@ -38,13 +38,13 @@ steps:
         function: main
   inputs:
   # Try change the backend to Forest
-  # - backend_specs: 
-  #    module_name: qequlacs.simulator
-  #    function_name: QulacsSimulator
-  - backend_specs:
-      module_name: qeforest.simulator
-      function_name: ForestSimulator
-      device_name: wavefunction-simulator
+  - backend_specs: 
+     module_name: qequlacs.simulator
+     function_name: QulacsSimulator
+  # - backend_specs:
+  #     module_name: qeforest.simulator
+  #     function_name: ForestSimulator
+  #     device_name: wavefunction-simulator
     type: specs
   outputs:
   - name: output-distribution

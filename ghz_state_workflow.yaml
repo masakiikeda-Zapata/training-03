@@ -1,11 +1,11 @@
 # Workflow API version
 apiVersion: io.orquestra.workflow/1.0.0
 # Prefix for workflow ID
-name: bell-state
+name: ghz-state
 
 # List components needed by workflow.
 imports:
-- name: bell-state
+- name: ghz-state
   type: git
   parameters:
     repository: "git@github.com:masakiikeda-Zapata/training-03.git"
@@ -17,9 +17,9 @@ steps:
   config:
     runtime:
       language: python3
-      imports: [bell-state] 
+      imports: [ghz-state] 
       parameters:
-        file: bell-state/steps/bell_state.py
+        file: ghz-state/steps/ghz_state.py
         function: main
   outputs:
   - name: results
